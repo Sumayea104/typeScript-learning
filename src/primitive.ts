@@ -2,9 +2,9 @@
 //string , Number , boolean, undefined, null
 // Special-TS: never , unknown , void
 
-let userName: string = "majba123";
+//let userName: string = "majba123";
 
-userName = 123 
+//userName = 123 
 
 
 let userID = 123
