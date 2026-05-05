@@ -223,3 +223,76 @@ const resultCallback = processNumber(5, (n) => n * 2);
 - **outDir**: `./dist` (কম্পাইল হওয়া জাভাস্ক্রিপ্ট ফাইলগুলো এখানে জমা হবে)
 
 এর ফলে সোর্স কোড এবং আউটপুট কোড আলাদা থাকে, যা প্রজেক্ট মেইনটেইন করা সহজ করে।
+
+
+# TypeScript Learning Notes (Spread & Rest Operator)
+
+
+## 🔹 Spread Operator (`...`)
+
+👉 Existing array বা object **expand / copy / merge** করার জন্য use হয়
+
+### 📌 Array Example:
+
+```ts
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+```
+
+👉 Output: `[1, 2, 3, 4, 5]`
+
+---
+
+### 📌 Object Example:
+
+```ts
+const user = { name: "Sumayea" };
+const updatedUser = { ...user, age: 25 };
+```
+
+👉 Output: `{ name: "Sumayea", age: 25 }`
+
+---
+
+👉 **Use case:**
+
+* Copy array/object
+* Merge data
+* Immutable update
+
+---
+
+## 🔹 Rest Operator (`...`)
+
+👉 Multiple value collect করে **একটা array-তে রাখে**
+
+### 📌 Function Example:
+
+```ts
+function sum(...numbers: number[]): number {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+sum(1, 2, 3, 4);
+```
+
+👉 এখানে:
+
+* `...numbers` → সব argument একসাথে array বানাচ্ছে
+
+---
+
+### 📌 Destructuring Example:
+
+```ts
+const [first, ...rest] = [10, 20, 30, 40];
+```
+
+👉 Output:
+
+* `first = 10`
+* `rest = [20, 30, 40]`
+
+
+📌 Learning Progress: TypeScript fundamentals getting stronger 🚀
+
