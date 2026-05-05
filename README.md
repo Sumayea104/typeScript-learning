@@ -58,6 +58,159 @@ tsc -w
 
 ### 💡 প্রো-টিপ :
 ### ⚙️ কনফিগুরেশন (Best Practices Followed)
+# TypeScript Learning Notes
+
+আজ আমি TypeScript-এর কিছু basic কিন্তু খুব important concept শিখলাম। নিচে সবগুলো একসাথে neatly লিখে রাখলাম 👇
+
+---
+
+## 🔹 Primitive Data Types
+
+Primitive data types হলো basic ধরনের data, যেগুলো সরাসরি value ধরে।
+
+### Examples:
+
+* `string`
+* `number`
+* `boolean`
+* `null`
+* `undefined`
+* `symbol`
+* `bigint`
+
+```ts
+let name: string = "Sumayea";
+let age: number = 25;
+let isStudent: boolean = true;
+```
+
+👉 এগুলো immutable (change করলে নতুন value তৈরি হয়)
+
+---
+
+## 🔹 Non-Primitive Data Types
+
+Non-primitive data types complex structure তৈরি করতে ব্যবহার হয়।
+
+### Examples:
+
+* `array`
+* `object`
+
+```ts
+let numbers: number[] = [1, 2, 3];
+
+let person: { name: string; age: number } = {
+  name: "Sumayea",
+  age: 25
+};
+```
+
+👉 এগুলো mutable (change করা যায়)
+
+---
+
+## 🔹 Object
+
+Object হলো key-value pair এর collection।
+
+```ts
+const user = {
+  name: "Sumayea",
+  age: 25,
+  isActive: true
+};
+```
+
+👉 Real-life data represent করার জন্য object সবচেয়ে বেশি use হয়
+
+---
+
+## 🔹 Function
+
+Function হলো reusable block of code, যেটা নির্দিষ্ট কাজ করে।
+
+```ts
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+const result = add(5, 3);
+```
+
+👉 TypeScript-এ function এর parameter এবং return type define করা যায়
+
+---
+
+## 🔹 Tuple
+
+Tuple হলো fixed length array যেখানে প্রতিটি index-এর data type আগে থেকেই নির্ধারিত থাকে।
+
+```ts
+let userTuple: [string, number] = ["Sumayea", 25];
+```
+
+👉 Order maintain করা খুব important
+
+---
+
+## 🔹 Coordinate (Tuple Example)
+
+Tuple real-life use case: coordinate system
+
+```ts
+let point: [number, number] = [10, 20];
+```
+
+👉 x = 10, y = 20
+
+---
+
+## 🔹 Map
+
+`map()` হলো array method, যা প্রতিটি element-এর উপর operation চালিয়ে নতুন array return করে
+
+```ts
+const numbersArr = [1, 2, 3];
+
+const doubled = numbersArr.map((num) => num * 2);
+```
+
+👉 Output: `[2, 4, 6]`
+👉 Original array change হয় না
+
+---
+
+## 🔹 Callback Function
+
+Callback function হলো এমন function, যেটা অন্য function-এর argument হিসেবে pass করা হয়
+
+```ts
+function processNumber(num: number, callback: (n: number) => number) {
+  return callback(num);
+}
+
+const resultCallback = processNumber(5, (n) => n * 2);
+```
+
+👉 `(n) => n * 2` হলো callback
+
+---
+
+## 🎯 Summary
+
+* Primitive → simple value
+* Non-primitive → complex structure
+* Object → key-value data
+* Function → reusable logic
+* Tuple → fixed structure array
+* Coordinate → tuple use case
+* Map → array transform
+* Callback → function as argument
+
+---
+
+📌 Learning Progress: Step by step TypeScript fundamentals building 🚀
 
 
 আমি আমার `tsconfig.json` ফাইলে নিচের কনফিগুরেশনগুলো সেট করেছি যাতে কোড আরও গোছানো থাকে:
