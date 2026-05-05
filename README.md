@@ -17,8 +17,8 @@
 
 ### ১. Node.js এনভায়রনমেন্ট সেটআপ:
 প্রজেক্টের সঠিক ভার্সন নিশ্চিত করতে নিচের কমান্ডগুলো অনুসরণ করুন:
-```bash
-# nvm ইন্সটল করা আছে কিনা চেক করুন
+
+## nvm ইন্সটল করা আছে কিনা চেক করুন
 nvm -v  # Expected output: 1.2.2
 
 # নির্দিষ্ট Node.js ভার্সন ইন্সটল করুন
@@ -33,7 +33,7 @@ nvm use 24.15.0
 
 ### ১. গ্লোবাল ইন্সটলেশন (Global Installation)
 প্রথমে টার্মিনাল বা CMD থেকে TypeScript-কে গ্লোবালি ইন্সটল করেছি যাতে যেকোনো ফোল্ডার থেকে এটি ব্যবহার করা যায়:
-```bash
+
 npm install -g typescript
 
 ২. ভার্সন চেক (Check Version)
@@ -58,6 +58,10 @@ tsc -w
 
 ### 💡 প্রো-টিপ :
 ### ⚙️ কনফিগুরেশন (Best Practices Followed)
+
+
+
+
 # TypeScript Learning Notes
 
 আজ আমি TypeScript-এর কিছু basic কিন্তু খুব important concept শিখলাম। নিচে সবগুলো একসাথে neatly লিখে রাখলাম 👇
