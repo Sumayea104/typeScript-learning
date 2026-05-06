@@ -31,7 +31,7 @@ nvm use 24.15.0
 
 আমি যেভাবে আমার পিসিতে TypeScript সেটআপ করেছি:
 
-### ১. গ্লোবাল ইন্সটলেশন (Global Installation)
+১. গ্লোবাল ইন্সটলেশন (Global Installation)
 প্রথমে টার্মিনাল বা CMD থেকে TypeScript-কে গ্লোবালি ইন্সটল করেছি যাতে যেকোনো ফোল্ডার থেকে এটি ব্যবহার করা যায়:
 
 npm install -g typescript
@@ -39,17 +39,18 @@ npm install -g typescript
 ২. ভার্সন চেক (Check Version)
 ইন্সটল ঠিকঠাক হয়েছে কিনা তা নিশ্চিত করতে নিচের কমান্ডটি দিয়েছি:
 
-Bash
 tsc -v
+
+
 ৩. প্রজেক্ট ইনিশিয়ালাইজেশন (Initialize TS Config)
 প্রজেক্টের রুট ডিরেক্টরিতে tsconfig.json ফাইল তৈরি করার জন্য নিচের কমান্ডটি ব্যবহার করেছি:
 
-Bash
 tsc --init
+
+
 ৪. সোর্স ফোল্ডার এবং কম্পাইল (Source Folder & Compilation)
 আমি আমার সব কোড src ফোল্ডারে রাখছি। কোড কম্পাইল করার জন্য আমি নিচের কমান্ডটি ব্যবহার করি:
 
-Bash
 # একবার কম্পাইল করার জন্য
 tsc
 
@@ -58,15 +59,6 @@ tsc -w
 
 ### 💡 প্রো-টিপ :
 ### ⚙️ কনফিগুরেশন (Best Practices Followed)
-
-
-
-
-# TypeScript Learning Notes
-
-আজ আমি TypeScript-এর কিছু basic কিন্তু খুব important concept শিখলাম। নিচে সবগুলো একসাথে neatly লিখে রাখলাম 👇
-
----
 
 ## 🔹 Primitive Data Types
 
