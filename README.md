@@ -57,9 +57,6 @@ tsc
 # অথবা অটো-কম্পাইল (Watch Mode) চালু রাখতে
 tsc -w
 
-### 💡 প্রো-টিপ :
-### ⚙️ কনফিগুরেশন (Best Practices Followed)
-
 ## 🔹 Primitive Data Types
 
 Primitive data types হলো basic ধরনের data, যেগুলো সরাসরি value ধরে।
@@ -205,17 +202,6 @@ const resultCallback = processNumber(5, (n) => n * 2);
 * Callback → function as argument
 
 ---
-
-📌 Learning Progress: Step by step TypeScript fundamentals building 🚀
-
-
-আমি আমার `tsconfig.json` ফাইলে নিচের কনফিগুরেশনগুলো সেট করেছি যাতে কোড আরও গোছানো থাকে:
-
-- **rootDir**: `./src` (সব টাইপস্ক্রিপ্ট ফাইল এখানে থাকবে)
-- **outDir**: `./dist` (কম্পাইল হওয়া জাভাস্ক্রিপ্ট ফাইলগুলো এখানে জমা হবে)
-
-এর ফলে সোর্স কোড এবং আউটপুট কোড আলাদা থাকে, যা প্রজেক্ট মেইনটেইন করা সহজ করে।
-
 
 # TypeScript Learning Notes (Spread & Rest Operator)
 
