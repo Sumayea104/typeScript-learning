@@ -5,18 +5,18 @@
 function addNormal(num1 : number, num2 : number) : number {
     return num1 + num2;
 };
-add(2, "2")
-add(2, 2);
+addNormal(2, "2")
+addNormal(2, 2);
 
-
+//arrow function
 const addArrow = (num1 : number, num2 : number) : number => num1 + num2;
 
 addArrow(2, 2);
-
+//object er moddhe function
 const poorUser = {
     name: "mezba",
     balance: 0,
-    addBalance(value: number){
+    addBalance(value: number): number {
         const totalBalance= this.balance + value;
         return totalBalance;
     },

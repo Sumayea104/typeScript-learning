@@ -25,7 +25,7 @@ mezbaNameAndRoll[0] = 'mezba'
 //toople can be 3 elements
 
 let destination : [string, string, number]= ['dhaka', 'chattogram', 3]
-
+-----------------------------
 // reference type : object
 
 // const user: {
