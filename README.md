@@ -31,7 +31,7 @@ nvm use 24.15.0
 
 আমি যেভাবে আমার পিসিতে TypeScript সেটআপ করেছি:
 
-### ১. গ্লোবাল ইন্সটলেশন (Global Installation)
+১. গ্লোবাল ইন্সটলেশন (Global Installation)
 প্রথমে টার্মিনাল বা CMD থেকে TypeScript-কে গ্লোবালি ইন্সটল করেছি যাতে যেকোনো ফোল্ডার থেকে এটি ব্যবহার করা যায়:
 
 npm install -g typescript
@@ -39,34 +39,23 @@ npm install -g typescript
 ২. ভার্সন চেক (Check Version)
 ইন্সটল ঠিকঠাক হয়েছে কিনা তা নিশ্চিত করতে নিচের কমান্ডটি দিয়েছি:
 
-Bash
 tsc -v
+
+
 ৩. প্রজেক্ট ইনিশিয়ালাইজেশন (Initialize TS Config)
 প্রজেক্টের রুট ডিরেক্টরিতে tsconfig.json ফাইল তৈরি করার জন্য নিচের কমান্ডটি ব্যবহার করেছি:
 
-Bash
 tsc --init
+
+
 ৪. সোর্স ফোল্ডার এবং কম্পাইল (Source Folder & Compilation)
 আমি আমার সব কোড src ফোল্ডারে রাখছি। কোড কম্পাইল করার জন্য আমি নিচের কমান্ডটি ব্যবহার করি:
 
-Bash
 # একবার কম্পাইল করার জন্য
 tsc
 
 # অথবা অটো-কম্পাইল (Watch Mode) চালু রাখতে
 tsc -w
-
-### 💡 প্রো-টিপ :
-### ⚙️ কনফিগুরেশন (Best Practices Followed)
-
-
-
-
-# TypeScript Learning Notes
-
-আজ আমি TypeScript-এর কিছু basic কিন্তু খুব important concept শিখলাম। নিচে সবগুলো একসাথে neatly লিখে রাখলাম 👇
-
----
 
 ## 🔹 Primitive Data Types
 
@@ -214,12 +203,74 @@ const resultCallback = processNumber(5, (n) => n * 2);
 
 ---
 
-📌 Learning Progress: Step by step TypeScript fundamentals building 🚀
+# TypeScript Learning Notes (Spread & Rest Operator)
 
 
-আমি আমার `tsconfig.json` ফাইলে নিচের কনফিগুরেশনগুলো সেট করেছি যাতে কোড আরও গোছানো থাকে:
+## 🔹 Spread Operator (`...`)
 
-- **rootDir**: `./src` (সব টাইপস্ক্রিপ্ট ফাইল এখানে থাকবে)
-- **outDir**: `./dist` (কম্পাইল হওয়া জাভাস্ক্রিপ্ট ফাইলগুলো এখানে জমা হবে)
+👉 Existing array বা object **expand / copy / merge** করার জন্য use হয়
 
-এর ফলে সোর্স কোড এবং আউটপুট কোড আলাদা থাকে, যা প্রজেক্ট মেইনটেইন করা সহজ করে।
+### 📌 Array Example:
+
+```ts
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+```
+
+👉 Output: `[1, 2, 3, 4, 5]`
+
+---
+
+### 📌 Object Example:
+
+```ts
+const user = { name: "Sumayea" };
+const updatedUser = { ...user, age: 25 };
+```
+
+👉 Output: `{ name: "Sumayea", age: 25 }`
+
+---
+
+👉 **Use case:**
+
+* Copy array/object
+* Merge data
+* Immutable update
+
+---
+
+## 🔹 Rest Operator (`...`)
+
+👉 Multiple value collect করে **একটা array-তে রাখে**
+
+### 📌 Function Example:
+
+```ts
+function sum(...numbers: number[]): number {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+sum(1, 2, 3, 4);
+```
+
+👉 এখানে:
+
+* `...numbers` → সব argument একসাথে array বানাচ্ছে
+
+---
+
+### 📌 Destructuring Example:
+
+```ts
+const [first, ...rest] = [10, 20, 30, 40];
+```
+
+👉 Output:
+
+* `first = 10`
+* `rest = [20, 30, 40]`
+
+
+📌 Learning Progress: TypeScript fundamentals getting stronger 🚀
+
