@@ -258,7 +258,7 @@ sum(1, 2, 3, 4);
 
 * `...numbers` → সব argument একসাথে array বানাচ্ছে
 
----
+--
 
 ### 📌 Destructuring Example:
 Destructuring ব্যবহার করা হয় Array বা Object থেকে খুব সহজভাবে data বের করার জন্য। এতে আলাদা করে index বা property লিখতে হয় না, ফলে code cleaner এবং readable হয়।
@@ -282,7 +282,7 @@ first প্রথম value নিবে
 
 first = 10
 rest = [20, 30, 40]
-
+---
 ✅ Object Destructuring Example:
 ```ts
 const person = {
@@ -295,7 +295,7 @@ const { name, age } = person;
 👉 এখানে object থেকে name এবং age সরাসরি বের করা হয়েছে।
 
 📌 Learning Progress: Writing cleaner and shorter code 🚀
-
+---
 📌 Type Alias
 
 Type Alias ব্যবহার করে আমরা নিজের custom type তৈরি করতে পারি। একই type বারবার লিখতে হয় না, তাই code maintain করা সহজ হয়।
@@ -322,7 +322,7 @@ Type safety বাড়ে
 বড় project এ manage করা সহজ হয়
 
 📌 Learning Progress: Building reusable and type-safe structures ✨
-
+---
 📌 Ternary Operator
 
 Ternary Operator হলো if...else এর short form। ছোট condition check করার জন্য এটি বেশি ব্যবহার করা হয়।
@@ -354,7 +354,7 @@ if (age >= 18) {
 }
 ```
 📌 Learning Progress: Writing smarter conditional logic ⚡
-
+---
 📌 Nullish Coalescing Operator (??)
 
 যখন কোনো value null বা undefined হয় তখন default value সেট করার জন্য ?? ব্যবহার করা হয়।
@@ -390,7 +390,7 @@ console.log(value ?? 100);
 ?? শুধু null এবং undefined check করে
 
 📌 Learning Progress: Handling default values more accurately 🛡️
-
+---
 📌 Optional Chaining (?.)
 
 Nested object এর কোনো property না থাকলেও যাতে error না আসে, তার জন্য Optional Chaining ব্যবহার করা হয়।
@@ -414,7 +414,7 @@ console.log(user.profile.city);
 👉 এখানে error হবে না, শুধু undefined return করবে।
 
 📌 Learning Progress: Preventing runtime errors like a pro 🔥
-
+---
 📌 Type Assertion
 
 Type Assertion ব্যবহার করে TypeScript কে manually বলে দেওয়া হয় কোন value কোন type হিসেবে treat হবে।
@@ -451,7 +451,7 @@ const getSearchName = (value: string | null) => {
 
 getSearchName(null);
 ```
-
+👉 Output:
 ```ts
 No Search Value
 ```
@@ -461,7 +461,7 @@ No Search Value
 না থাকলে "No Search Value" দেখাবে
 
 📌 Learning Progress: Handling empty or missing values safely 🛡️
-
+---
 📌 Unknown Type
 
 unknown হলো safer version of any।
@@ -481,6 +481,7 @@ const checkValue = (value: unknown) => {
 
 checkValue("typescript");
 ```
+👉 Output:
 ```ts
 TYPESCRIPT
 ```
@@ -510,7 +511,7 @@ if (typeof value === "string") {
 👉 এখানে safe way তে type check করা হয়েছে।
 
 📌 Learning Progress: Writing safer and more reliable TypeScript code 🚀
-
+---
 📌 Never Type
 
 never type এমন function এর জন্য ব্যবহার করা হয় যেগুলো কখনো কিছু return করে না।
@@ -562,7 +563,7 @@ const crash = (): never => {
 👉 Function execution এখানেই বন্ধ হয়ে যাবে।
 
 📌 Learning Progress: Understanding advanced TypeScript types like a pro 🔥
-
+---
 
 
 
